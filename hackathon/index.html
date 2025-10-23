@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="static/style.css">
+  <title>Protótipo — Projeto</title>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <header>
+      <a class="brand" href="index.html" aria-label="Página inicial">
+        <span class="logo">P</span>
+        <div>
+          <div style="font-weight:700">Projeto</div>
+          <div style="font-size:12px; color:var(--muted)">Protótipo rápido</div>
+        </div>
+      </a>
+
+      <nav aria-label="Menu principal">
+        <a href="horarios.html">Horários</a>
+        <a href="area-professor.html">Area professor-teste-</a>
+        <a class="primary" href="novas-reservas.html">Nova Reserva</a>
+      </nav>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="left">
+        <h1 id="hero-title">Painel de controle — protótipo</h1>
+        <p>Visualize horários, confirme presença, acompanhe o estado dos equipamentos e registre feedbacks — tudo em um layout simples para testes.</p>
+        <div class="cta">
+          <button class="btn primary" onclick="alert('Ação demo')">Criar nova</button>
+          <button class="btn ghost" onclick="alert('Export demo')">Exportar</button>
+        </div>
+      </div>
+
+      <div style="min-width:220px; text-align:right">
+        <div style="background:var(--card); padding:12px; border-radius:12px; box-shadow:var(--shadow); border:1px solid rgba(16,24,40,0.03)">
+          <div style="font-size:12px; color:var(--muted)">Próxima aula</div>
+          <div style="font-weight:800; font-size:16px">Programação — Prof. Ana</div>
+          <div style="color:var(--muted); font-size:13px; margin-top:6px">Seg, 14:00 — Sala 2</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content" aria-label="Conteúdo principal">
+      <div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px">
+          <h2 style="margin:0; font-size:16px">Dispositivos / Status</h2>
+          <div style="color:var(--muted); font-size:13px">10 dispositivos</div>
+        </div>
+
+        <div class="cards" aria-live="polite">
+          <article class="card" role="article">
+            <h3>PC - Sala 1</h3>
+            <p>Estado: <strong style="color:#059669">OK</strong></p>
+            <p style="margin-top:8px; color:var(--muted)">Último feedback: teclado com atraso.</p>
+          </article>
+
+          <article class="card">
+            <h3>Impressora - Sala 2</h3>
+            <p>Estado: <strong style="color:#f97316">Manutenção</strong></p>
+            <p style="margin-top:8px; color:var(--muted)">Fila: 3 tarefas pendentes</p>
+          </article>
+
+          <article class="card">
+            <h3>Router</h3>
+            <p>Estado: <strong style="color:#ef4444">Offline</strong></p>
+            <p style="margin-top:8px; color:var(--muted)">Última atualização: 2h atrás</p>
+          </article>
+
+          <article class="card">
+            <h3>Projetor - Laboratório</h3>
+            <p>Estado: <strong style="color:#059669">OK</strong></p>
+            <p style="margin-top:8px; color:var(--muted)">Lamp life: 1200h</p>
+          </article>
+
+          <!-- Exemplo de card para horário -->
+          <article class="card">
+            <h3>Agenda — 10/11/2025</h3>
+            <p>08:00 — 09:50 — Prof. João (Confirmado)</p>
+            <p>10:00 — 11:50 — Prof. Marina (Pendente)</p>
+          </article>
+        </div>
+      </div>
+
+      <aside class="panel" aria-label="Painel lateral">
+        <div>
+          <div class="small-stat">
+            <div>
+              <div style="font-size:12px; color:var(--muted)">Reservas hoje</div>
+              <div class="num">4</div>
+            </div>
+            <div>
+              <div style="font-size:12px; color:var(--muted)">Equip. offline</div>
+              <div class="num" style="color:#ef4444">1</div>
+            </div>
+          </div>
+        </div>
+
+        <hr style="border:none; height:1px; background:rgba(16,24,40,0.03); margin:6px 0 0 0">
+
+        <form onsubmit="event.preventDefault(); alert('Enviado (demo)')">
+          <label for="nome">Nome</label>
+          <input id="nome" type="text" placeholder="Seu nome" required>
+
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="contato@exemplo.com" required>
+
+          <label for="mensagem">Mensagem / Feedback</label>
+          <textarea id="mensagem" placeholder="Descreva o problema..." required></textarea>
+
+          <div style="display:flex; gap:8px; margin-top:10px">
+            <button class="btn primary" type="submit">Enviar</button>
+            <button class="btn ghost" type="button" onclick="document.getElementById('mensagem').value=''">Limpar</button>
+          </div>
+        </form>
+      </aside>
+    </section>
+
+    <footer>
+      <div>© <strong>Protótipo</strong> — Escola / Demo</div>
+      <div style="color:var(--muted)">Versão 0.1 • Layout para testes</div>
+    </footer>
+  </div>
+
+  <script src="static/script.js"></script>
+</body>
+</html>
