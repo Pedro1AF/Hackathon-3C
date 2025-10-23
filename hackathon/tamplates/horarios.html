@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/static/horarios.css">
+  <title>Página de Horários</title>
+
+</head>
+<body>
+  <div class="wrap">
+    <!-- HEADER INSERIDO -->
+    <header>
+      <a class="brand" href="index.html" aria-label="Página inicial">
+        <span class="logo">P</span>
+        <div>
+          <div style="font-weight:700">Projeto</div>
+          <div style="font-size:12px; color:var(--muted)">Protótipo rápido</div>
+        </div>
+      </a>
+
+      <nav aria-label="Menu principal">
+        <a href="area-professor.html">area professor-teste-</a>
+        <a href="horarios.html" class="active">Horários</a>
+        <a class="primary" href="novas-reservas.html">Nova Reserva</a>
+      </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <div class="container">
+      <h1>Horários Semanais</h1>
+      <table id="tabelaHorarios">
+        <thead>
+          <tr>
+            <th>Dia</th>
+            <th>Horário</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Segunda -->
+          <tr class="dropdown">
+            <td>Segunda-feira</td>
+            <td>08:00 - 09:50</td>
+            <td><span class="badge">Confirmado</span></td>
+          </tr>
+          <tr class="details">
+            <td colspan="3">
+              <p><strong>Professor:</strong> Ana Silva</p>
+              <p><strong>Disciplina:</strong> Programação</p>
+              <p><strong>Turma:</strong> 2°D</p>
+              <p><strong>Sala:</strong> Laboratório 1</p>
+            </td>
+          </tr>
+
+          <tr class="dropdown">
+            <td>Segunda-feira</td>
+            <td>10:00 - 11:50</td>
+            <td><span class="badge" style="background:#f59e0b">Pendente</span></td>
+          </tr>
+          <tr class="details">
+            <td colspan="3">
+              <p><strong>Professor:</strong> João Pereira</p>
+              <p><strong>Disciplina:</strong> Redes</p>
+              <p><strong>Turma:</strong> 9°C</p>
+              <p><strong>Sala:</strong> Informática 2</p>
+            </td>
+          </tr>
+
+          <!-- Terça -->
+          <tr class="dropdown">
+            <td>Terça-feira</td>
+            <td>08:00 - 09:50</td>
+            <td><span class="badge">Confirmado</span></td>
+          </tr>
+          <tr class="details">
+            <td colspan="3">
+              <p><strong>Professor:</strong> Marina Costa</p>
+              <p><strong>Disciplina:</strong> Banco de Dados</p>
+              <p><strong>Turma:</strong> 2°D</p>
+              <p><strong>Sala:</strong> Laboratório 2</p>
+            </td>
+          </tr>
+
+          <!-- Quarta -->
+          <tr class="dropdown">
+            <td>Quarta-feira</td>
+            <td>09:00 - 10:50</td>
+            <td><span class="badge">Confirmado</span></td>
+          </tr>
+          <tr class="details">
+            <td colspan="3">
+              <p><strong>Professor:</strong> Pedro Lima</p>
+              <p><strong>Disciplina:</strong> Segurança da Informação</p>
+              <p><strong>Turma:</strong>1°E</p>
+              <p><strong>Sala:</strong> Lab Redes</p>
+            </td>
+          </tr>
+
+          <!-- Quinta -->
+          <tr class="dropdown">
+            <td>Quinta-feira</td>
+            <td>08:00 - 09:50</td>
+            <td><span class="badge">Confirmado</span></td>
+          </tr>
+          <tr class="details">
+            <td colspan="3">
+              <p><strong>Professor:</strong> Bruno Souza</p>
+              <p><strong>Disciplina:</strong> Hardware</p>
+              <p><strong>Turma:</strong> 3°C</p>
+            </td>
+          </tr>
+
+          <!-- Sexta -->
+          <tr class="dropdown">
+            <td>Sexta-feira</td>
+            <td>10:00 - 11:50</td>
+            <td><span class="badge" style="background:#ef4444">Cancelado</span></td>
+            <td><button>Pedir Horario</button></td>
+          </tr>
+          <tr class="details">
+            <td colspan="3">
+              <p><strong>Professor:</strong> Fernanda Lopes</p>
+              <p><strong>Disciplina:</strong> Robótica</p>
+              <p><strong>Turma:</strong> 2°C</p>
+              <p><strong>Motivo:</strong> Manutenção no laboratório</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <footer>© 2025 — Sistema de Horários Escolar</footer>
+    </div>
+  </div>
+
+  <script>
+    // Faz os horários retraírem ao clicar
+    document.querySelectorAll(".dropdown").forEach((row) => {
+      row.addEventListener("click", () => {
+        document.querySelectorAll(".dropdown").forEach((r) => {
+          if (r !== row) r.classList.remove("open");
+        });
+        row.classList.toggle("open");
+      });
+    });
+  </script>
+</body>
+</html>

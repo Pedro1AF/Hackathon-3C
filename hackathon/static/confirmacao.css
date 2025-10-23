@@ -1,0 +1,111 @@
+
+    :root {
+      --bg: #f9f9f9;
+      --card: #fff;
+      --border: #ddd;
+      --text: #222;
+      --muted: #555;
+      --accent: #4a6cf7;
+      --shadow: 0 4px 14px rgba(0,0,0,0.05);
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 20px;
+    }
+
+ /* ---------- Top bar / header ---------- */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      background:var(--card);
+      padding:14px;
+      border-radius:16px;
+      box-shadow:var(--shadow);
+      border:1px solid rgba(16,24,40,0.03);
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      text-decoration:none;
+      color:inherit;
+    }
+    .logo{
+      width:44px;
+      height:44px;
+      border-radius:10px;
+      display:inline-grid;
+      place-items:center;
+      background:linear-gradient(135deg,var(--accent),#7c3aed);
+      color:white;
+      font-weight:700;
+      font-size:18px;
+      box-shadow: 0 4px 14px rgba(37,99,235,0.18);
+    }
+    nav{
+      display:flex;
+      gap:8px;
+      align-items:center;
+    }
+    nav a{
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:10px;
+      color:var(--muted);
+      font-weight:600;
+      font-size:14px;
+    }
+    nav a.primary{
+      background:var(--accent);
+      color:white;
+    }
+
+    .active{
+      color:rgb(0, 81, 255);
+    }
+    main {
+      max-width: 600px;
+      margin: 50px auto;
+      background: var(--card);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      margin-top: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-size: 15px;
+      margin-top: 20px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 15px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #3e5ae0;
+    }
